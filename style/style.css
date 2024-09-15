@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css?family=Anonymous Pro");
+@import url("https://fonts.googleapis.com/css?family=Bungee");
+@import url("https://fonts.googleapis.com/css?family=Acme");
+@import url("https://fonts.googleapis.com/css?family=LXGW WenKai Mono TC");
+@import url("https://fonts.googleapis.com/css?family=Alata");
+@import url("https://fonts.googleapis.com/css?family=Assistant");
+@import url("https://fonts.googleapis.com/css?family=Alatsi");
+/* a tag color */
+/* font color */
+/* skill active color */
+.main_nav {
+  background-color: #34343b;
+  display: block;
+  position: relative;
+  box-shadow: 0px 5px 5px #2f2d2d;
+}
+.main_nav .aboutme .nav_bar_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.main_nav .aboutme .nav_bar_container .nav_btn {
+  display: block;
+  position: relative;
+}
+.main_nav .aboutme .nav_bar_container .nav_btn input {
+  background-color: #3c3c40;
+  border: none;
+  width: 24rem;
+  height: 5rem;
+  border-radius: 8px;
+  color: #f8f9f8;
+  font-size: 2rem;
+}
+.main_nav .aboutme .nav_bar_container .nav_btn input::placeholder {
+  font-family: "Anonymous Pro";
+  letter-spacing: 2px;
+  padding-left: 2rem;
+  font-size: 2rem;
+}
+.main_nav .aboutme .nav_bar_container .nav_btn img {
+  position: absolute;
+  right: 5%;
+  top: 25%;
+  transform: translate(0% -50%);
+}
+.main_nav .aboutme .nav_link {
+  display: flex;
+  column-gap: 4rem;
+}
+
+#atag {
+  fill: none;
+  font-size: 8rem;
+  stroke: #ffc86a;
+  font-family: "Bungee";
+  stroke-width: 3;
+  stroke-dasharray: 220;
+}
+
+.about_me {
+  width: 100%;
+  height: 50rem;
+  background-image: url(../img/My_img\ 1.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 103%;
+  position: relative;
+}
+.about_me .describe_me {
+  position: absolute;
+  left: 20%;
+  top: 35%;
+}
+.about_me .describe_me p {
+  font-size: 3rem;
+  line-height: 4rem;
+}
+.about_me .describe_me p strong {
+  color: #fed48c;
+}
+.about_me .describe_me button {
+  margin-top: 3rem;
+  background-color: transparent;
+  border: 3px solid #fed48c;
+  border-radius: 8px;
+  font-size: 2rem;
+  width: 16rem;
+  height: 6rem;
+  color: #fed48c;
+}
+.about_me .socialmedia {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  left: 95%;
+  top: 20%;
+  transform: scale(0.7);
+}
+.about_me .socialmedia li hr {
+  position: relative;
+  height: 20rem;
+  border: none;
+  border-left: 2px solid #ffc86a;
+  left: 2rem;
+}
+
+#myname {
+  fill: none;
+  font-size: 3rem;
+  stroke: #ffc86a;
+  font-family: "Bungee";
+  stroke-width: 1;
+  stroke-dasharray: 110;
+}
+
+.about .about_main {
+  margin: 10rem;
+}
+.about .about_main #about_content {
+  font-size: 2rem;
+}
+.about .about_main #about_content h1 {
+  text-align: start;
+}
+.about .about_main #about_content .abour_cont {
+  position: relative;
+  margin: 4rem;
+  display: flex;
+  column-gap: 2rem;
+}
+.about .about_main #about_content .abour_cont hr {
+  position: relative;
+  border: none;
+  border-top: 2px solid #fed48c;
+  width: 35rem;
+  top: 12px;
+}
+.about .about_main #about_content .abour_cont p .about_hig {
+  color: #fed48c;
+}
+.about .about_main .about_skils {
+  font-size: 2rem;
+}
+.about .about_main .about_skils .skills_icon {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.about .about_main .about_skils .skills_icon .skills {
+  width: 28rem;
+  height: 30rem;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 3rem auto;
+  background-color: #3d3e42;
+  border-radius: 16px;
+}
+.about .about_main .about_skils .skills_icon .skills:hover {
+  background-color: #f0bf6b;
+}
+.about .about_main .about_skils .skills_icon .skills .skill-icon {
+  position: relative;
+  top: 3rem;
+}
+.about .about_main .about_skils .skills_icon .skills .skill-name {
+  position: relative;
+  bottom: 2rem;
+  font-size: 3rem;
+}
+.about .about_main .about_skils .skills_icon .skills_active {
+  background-color: #fed48c;
+}
+
+#portfolio_content {
+  margin: 10rem;
+}
+#portfolio_content h1 {
+  margin-bottom: 6rem;
+}
+
+.portfolios_bio {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  margin: auto 6rem;
+}
+.portfolios_bio .portfolios {
+  background-image: url("../img/portfolio_img/guess.svg");
+  width: 100%;
+  height: 40rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.portfolios_bio .portfolios:hover .portfolios_hover {
+  transform: translate(0%, 0%);
+  opacity: 1;
+}
+.portfolios_bio .portfolios_hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5rem;
+  text-align: center;
+  transform: translate(0%, 50%);
+  transition: all 0.2s linear;
+  opacity: 0;
+}
+.portfolios_bio .portfolios_hover .portfolios_links {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translate(0%, 60%);
+}
+.portfolios_bio .portfolios_hover .portfolios_links h2 {
+  font-family: "Alata";
+}
+.portfolios_bio .portfolios_hover .portfolios_links span {
+  font-family: "Assistant";
+  font-size: 15px;
+}
+.portfolios_bio .portfolios_hover .portfolios_links a {
+  font-size: 15px;
+  text-decoration: none;
+  color: #fed48c;
+  border: 1px solid #ffc86a;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.experience-main {
+  position: relative;
+  display: block;
+  background-color: #34343b;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3), 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding-bottom: 3rem;
+}
+.experience-main .experience h1 {
+  text-align: start;
+  position: relative;
+  top: -30px;
+}
+.experience-main .experience .experience_2021 {
+  display: grid;
+  grid-template-columns: 15rem 10rem 1fr;
+  margin-bottom: 6rem;
+}
+.experience-main .experience .experience_2021 .experience_year {
+  position: relative;
+  bottom: 20px;
+  left: 50px;
+}
+.experience-main .experience .experience_2021 .grid_2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.experience-main .experience .experience_2021 .grid_2 .experience_high {
+  position: absolute;
+  top: -40px;
+}
+.experience-main .experience .experience_2021 .grid_2 .experience_hr_2021 {
+  position: absolute;
+  top: 25px;
+  height: 4rem;
+  border: none;
+  border-left: 3px solid #e5e4e7;
+}
+.experience-main .experience .experience_2021 .about_experience_2021 .experience_about {
+  display: flex;
+  justify-content: space-between;
+}
+.experience-main .experience .experience_2021 .about_experience_2021 .experience_about h2 {
+  font-family: "Alatsi";
+}
+.experience-main .experience .experience_2021 .about_experience_2021 .experience_about p {
+  font-size: "LXGW WenKai Mono TC";
+}
+.experience-main .experience .experience_2021 .about_experience_2021 .experience_describe {
+  font-size: "LXGW WenKai Mono TC";
+  line-height: 3rem;
+}
+
+/* background color  */
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: 0.5px solid #ffc86a;
+  outline-offset: 5px;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #30333a;
+  color: #e5e4e7;
+  padding: auto 4rem;
+  font-size: 2rem;
+}
+
+.main_container {
+  display: block;
+  position: relative;
+}
+
+.aboutme,
+.about_main,
+.Portfolio_content,
+.experience {
+  display: block;
+  position: relative;
+  margin: auto 4rem;
+  font-family: "Anonymous Pro";
+  font-size: 2rem;
+}
+
+.about_main,
+.Portfolio_content,
+.experience {
+  margin: 10rem;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Acme";
+  color: #f8f9f8;
+  margin-bottom: 3rem;
+}
+
+p {
+  font-family: "LXGW WenKai Mono TC";
+  line-height: 3rem;
+  color: #e5e4e7;
+}
+
+li {
+  list-style-type: none;
+  font-size: 2rem;
+}
+li a {
+  text-decoration: none;
+  color: #96989b;
+}
+li a:hover {
+  color: #f8f9f8;
+}
+
+/*# sourceMappingURL=style.css.map */

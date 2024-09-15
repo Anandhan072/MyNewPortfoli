@@ -1,0 +1,19 @@
+{
+  "name": "new-portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass ./sass/main.scss ./style/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.78.0"
+  },
+  "dependencies": {
+    "parcel": "^2.12.0"
+  }
+}

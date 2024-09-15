@@ -1,0 +1,64 @@
+#portfolio_content {
+  margin: 10rem;
+  h1 {
+    margin-bottom: 6rem;
+  }
+}
+
+.portfolios_bio {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  margin: auto 6rem;
+
+  .portfolios {
+    background-image: url("../img/portfolio_img/guess.svg");
+    width: 100%;
+    height: 40rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    &:hover .portfolios_hover {
+      transform: translate(0%, 0%);
+      opacity: 1;
+    }
+  }
+  .portfolios_hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.6);
+    padding: 5rem;
+    text-align: center;
+    transform: translate(0%, 50%);
+    transition: all 0.2s linear;
+    opacity: 0;
+
+    .portfolios_links {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transform: translate(0%, 60%);
+      h2 {
+        font-family: "Alata";
+      }
+      span {
+        font-family: "Assistant";
+        font-size: 15px;
+      }
+      a {
+        font-size: 15px;
+        text-decoration: none;
+        color: $primary--font-light-color;
+        border: 1px solid $primary--font-highlight-color;
+        padding: 1rem;
+        border-radius: 8px;
+      }
+    }
+  }
+}
