@@ -1,6 +1,15 @@
 "use strict";
+import logo from "../img/skils_icons.svg";
+import trusshine from "../img/portfolio_img/trusshine.svg";
+
+import Forkify from "../img/portfolio_img/Forkify.svg";
+import zoho from "../img/portfolio_img/zoho.svg";
+import bank from "../img/portfolio_img/bank.svg";
+import map from "../img/portfolio_img/map.svg";
+import guess from "../img/portfolio_img/guess.svg";
 
 /// My log animi function
+
 const atagEl = document.querySelector("#atag");
 const skills_iconEl = document.querySelector(".skills_icon");
 const portfoliosEl = document.querySelector(".portfolios_bio");
@@ -51,7 +60,7 @@ intersection.observe(atagEl);
 
 /*
                         
-
+<use href="./img/skils_icons.svg#icon-${icons}"></use> 
 
                     */
 
@@ -63,7 +72,7 @@ const addSkillEl = function () {
     htmlEl += `<div class="skills skills-${icons}">
                 <span class="skill-icon">
                     <svg width="80" height="80" fill="none">
-                        <use href="./img/skils_icons.svg#icon-${icons}"></use> 
+                        <use href="${logo}#icon-${icons}"></use> 
 
                     </svg>
                   </span><br>
@@ -116,14 +125,7 @@ const portfolio_content = [
 
 const portfolioHeadings = [`TruShine`, `Forkify`, `Zoho`, `Bank`, `Leaflate`, `Guess Number`];
 
-const portfolio_img = [
-  `../img/portfolio_img/trusshine.svg`,
-  `../img/portfolio_img/Forkify.svg`,
-  `../img/portfolio_img/zoho.svg`,
-  `../img/portfolio_img/bank.svg`,
-  `../img/portfolio_img/map.svg`,
-  `../img/portfolio_img/guess.svg`,
-];
+const portfolio_img = [trusshine, Forkify, zoho, bank, map, guess];
 
 /* <div class="portfolios portfolios_trushine">
     <div class="portfolios_hover hover_trushine">
@@ -140,6 +142,7 @@ const addPortFolio = function () {
   let htmlEl = ``;
 
   portfolioHeadings.forEach((acc, i) => {
+    console.log("hi");
     const val = acc.toLocaleLowerCase().split(" ").join("");
     console.log(val);
     htmlEl += `<div class="portfolios portfolios_${val}">
@@ -164,6 +167,7 @@ const addPortFolio = function () {
   });
 };
 
+addPortFolio();
 // experience find hight
 
 about_experience_2021El.forEach((acc, i) => {
