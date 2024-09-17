@@ -8,13 +8,17 @@ import guess from "../img/portfolio_img/guess.svg";
 
 /// My log animi function
 
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+import { async } from "regenerator-runtime";
+
 const atagEl = document.querySelector("#atag");
+console.log(atagEl);
 const skills_iconEl = document.querySelector(".skills_icon");
 const portfoliosEl = document.querySelector(".portfolios_bio");
 const about_experience_2021El = document.querySelectorAll(".about_experience_2021");
 const ex2021 = document.querySelectorAll(`.experience_hr_2021`);
 let skillsEl = "";
-
 let percentage = 0;
 let offsetValue = 0;
 

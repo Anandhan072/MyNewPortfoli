@@ -21,6 +21,14 @@
   justify-content: space-between;
   padding: 2rem;
 }
+.main_nav .aboutme .nav_bar_container .my_log a svg #atag {
+  fill: none;
+  font-size: 8rem;
+  stroke: #ffc86a;
+  font-family: "Bungee";
+  stroke-width: 3;
+  stroke-dasharray: 220;
+}
 .main_nav .aboutme .nav_bar_container .nav_btn {
   display: block;
   position: relative;
@@ -47,15 +55,6 @@
 .main_nav .aboutme .nav_link {
   display: flex;
   column-gap: 4rem;
-}
-
-#atag {
-  fill: none;
-  font-size: 8rem;
-  stroke: #ffc86a;
-  font-family: "Bungee";
-  stroke-width: 3;
-  stroke-dasharray: 220;
 }
 
 .about_me {

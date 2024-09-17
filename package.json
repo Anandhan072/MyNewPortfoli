@@ -15,11 +15,14 @@
   "devDependencies": {
     "@babel/cli": "^7.25.6",
     "@babel/core": "^7.25.2",
+    "@babel/plugin-transform-runtime": "^7.25.4",
     "@babel/preset-env": "^7.25.4",
     "parcel": "^2.12.0",
     "sass": "^1.78.0"
   },
   "dependencies": {
-    "core-js": "^3.38.1"
+    "@parcel/transformer-svg-react": "^2.12.0",
+    "core-js": "^3.38.1",
+    "regenerator-runtime": "^0.14.1"
   }
 }

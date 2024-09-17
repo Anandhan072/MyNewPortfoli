@@ -9,6 +9,20 @@
       align-items: center;
       justify-content: space-between;
       padding: 2rem;
+      .my_log {
+        a {
+          svg {
+            #atag {
+              fill: none;
+              font-size: 8rem;
+              stroke: $primary--font-highlight-color;
+              font-family: "Bungee";
+              stroke-width: 3;
+              stroke-dasharray: 220;
+            }
+          }
+        }
+      }
 
       .nav_btn {
         display: block;
@@ -39,12 +53,4 @@
       column-gap: 4rem;
     }
   }
-}
-#atag {
-  fill: none;
-  font-size: 8rem;
-  stroke: $primary--font-highlight-color;
-  font-family: "Bungee";
-  stroke-width: 3;
-  stroke-dasharray: 220;
 }
