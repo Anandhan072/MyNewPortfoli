@@ -7,7 +7,7 @@
     <meta name="description" content="My PortFolio"/>   
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./style/style.css">
-    <script type="module" defer  src="./script/indes.js"></script>
+    <script type="module" src="./script/indes.js"></script>
 </head>
 
 <body>
@@ -25,13 +25,16 @@
                     </a>
                 </div>
                 <div class="nav_link">
-                    <li><a href="#" data-about="about_content">About</a></li>
-                    <li><a href="#" data-prof="portfolio_content">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" data-nav="about_content" class="alink">About</a></li>
+                    <li><a href="#" data-nav="portfolio_content" class="alink">Portfolio</a></li>
+                    <li><a href="#" data-nav="contact_content" class="alink">Contact</a></li>
                 </div>
                 <div class="nav_btn">
-                   <input type="search" id="nav_search" placeholder="Search">
-                   <img src="./img/search.svg" alt="">
+                    <a href="./My_Resume.pdf" download="./My_Resume.pdf"><button>Resume &ensp;&ensp;<span><svg width="42" height="43" fill="none">
+                        <use href="./img/symbol.svg#icon-download"></use>
+                      </svg></span></button>
+                    </a>
+                  
                 </div>
            
             </div>
@@ -42,7 +45,10 @@
                     <text id="myname" y="30">Anandhan</text>
                  </svg></strong> <br>
                     Aspiring as webdevloper </p>
-                <button>Contact Me</button>
+                    
+                        <button class="open_emial">Contact Me</button>
+                    
+                
 
                </div>
                <div class="socialmedia">
@@ -180,8 +186,101 @@
             </div>
 
         </div>
-        <div class="contact">
-            <h1>knjnkjnkjn</h1>
+        <div class="contact" id="contact_content">
+            <fieldset>
+                <legend class="contact_me">Contact Me</legend>
+              </fieldset>
+            
+                <div class="contact_container">
+                    <div class="btn_mail"><button>anandhans072@gmail.com</button></div>
+                    <div class="btn_phone">(+91) 8110859072</div>
+                    <div class="btn_address"><address>India, TamilNadu</address></div>   
+                </div>
+              
+
+           
+                <!-- <div class="contact_container1">
+                    <form action="" class="contact_form">
+                        <span>
+                            <label for="name">
+                                <svg width="39" height="39" fill="none">
+                                    <use href="./img/symbol.svg#icon-user"></use>
+                                </svg>
+                            </label>
+                        <input type="text" name="customerName" id="name" placeholder="Enter your Name" required>
+                        </span>
+                        <span>
+                            <label for="email">
+                                <svg width="43" height="43" fill="none" transform="scale(0.8)">
+                                    <use href="./img/symbol.svg#icon-mail" ></use>
+                                </svg>
+                            </label>
+                            <input type="email" name="customerEmail" id="email" placeholder="Enter your email" required>
+                        </span>
+                        <span>
+                            <label for="number">
+                                <svg width="39" height="39" fill="none">
+                                    <use href="./img/symbol.svg#icon-phone"></use>
+                                </svg>
+                            </label>
+                        <input type="number" name="customerNumber" id="number" placeholder="Enter your mobile number">
+                        </span>
+                       
+                        <span>
+                            <label for="subject">
+                                <svg width="39" height="39" fill="none">
+                                    <use href="./img/symbol.svg#icon-sub"></use>
+                                </svg>
+                            </label>
+                        <input type="text" name="customerSubject" id="subject" placeholder="Enter your Subject" required>
+                        </span>
+                        <span> <label for="textarea" >
+                            <svg width="39" height="39" fill="none">
+                                <use href="./img/symbol.svg#icon-text"></use>
+                            </svg>
+                        </label>
+                            <textarea name="message" id="texta" required></textarea></span>
+                        <span >
+                           <span>
+                            <input type="submit" value="submit" class="submit_btn">
+                           </span>
+                           
+                        </span>
+                        
+                        
+                       
+
+
+                    </form>
+
+                </div> -->
+               
+              
+            
+            <fieldset>
+                <legend class="contact_me2">
+                    <li><a href="#">
+                        <svg width="40" height="40" fill="none">
+                            <use href="./img/social_icons.svg#icon-fb"></use></svg>
+                    </a></li>
+                    <li><a href="#">
+                        <svg width="40" height="40" fill="none">
+                            <use href="./img/social_icons.svg#icon-insta"></use></svg>
+                    </a></li>
+                    <li><a href="#">
+                        <svg width="40" height="40" fill="none">
+                            <use href="./img/social_icons.svg#icon-liIn"></use></svg>
+                    </a></li>
+                    <li><a href="#">
+                        <svg width="40" height="40" fill="none">
+                            <use href="./img/social_icons.svg#icon-whatsapp"></use></svg>
+                    </a></li>
+                    </legend>
+              </fieldset>
+        </div>
+        <div class="thanks_messahe">
+            <h1>Thanks for Scrolling</h1>
+
         </div>
     </div>
     

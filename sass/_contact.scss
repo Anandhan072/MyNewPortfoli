@@ -1,0 +1,179 @@
+// .contact {
+//   display: block;
+//   position: relative;
+//   margin-top: 10rem;
+//   background-color: #3d3f43;
+//   .contact_main {
+//     display: flex;
+//     justify-content: space-around;
+
+//     .contact_container1 {
+//       .contact_form {
+//         display: flex;
+//         flex-direction: column;
+//         row-gap: 3rem;
+//         span {
+//           position: relative;
+//           label {
+//             position: absolute;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   fieldset {
+//     position: relative;
+//     border: none;
+//     border-top: 3px solid $primary--font-highlight-color;
+
+//     &:first-child {
+//       top: -37px;
+//     }
+//     &:last-child {
+//       top: 13px;
+//     }
+//     .contact_me {
+//       font-size: 5rem;
+//       font-family: "Alata";
+//     }
+//     legend {
+//       font-size: 2rem;
+//       text-align: center;
+//       margin: auto;
+//       padding-left: 10rem;
+//       padding-right: 10rem;
+//     }
+//   }
+// }
+
+// input,
+// textarea {
+//   outline: none;
+//   height: 4rem;
+//   width: 40rem;
+//   background: transparent;
+//   border: 0.5px solid $primary--font-highlight-color;
+//   outline: none;
+//   resize: none;
+//   font-size: 1.5rem;
+//   padding-left: 5rem;
+//   color: white;
+//   font-family: "LXGW WenKai Mono TC";
+
+//   &:focus {
+//     outline: none;
+//     border: 0.5px solid white;
+//   }
+//   &::placeholder {
+//     font-size: 1.5rem;
+//   }
+// }
+
+// textarea {
+//   resize: none;
+// }
+
+// .chances {
+//   position: absolute;
+//   width: 40px;
+//   height: 40px;
+//   padding: 0;
+//   margin: 0;
+//   left: 0px;
+// }
+
+// .btn_submit {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .submit_btn {
+//   padding: 0rem;
+//   background-color: $primary--a-active-color;
+//   border: none;
+//   font-size: 3rem;
+//   color: $primary--font-highlight-color;
+//   cursor: pointer;
+//   font-family: "Alata";
+//   transition: ;
+
+//   &:active {
+//     background-color: $primary--font-highlight-color;
+//     color: $primary--a-active-color;
+//   }
+// }
+
+.contact {
+  display: block;
+  position: relative;
+  margin-top: 10rem;
+  background-color: #3d3f43;
+
+  .contact_container {
+    margin: auto;
+    display: flex;
+    width: 80rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+
+    div {
+      button {
+        @include card-contact;
+      }
+    }
+    .btn_phone,
+    .btn_address {
+      @include card-contact;
+      text-align: center;
+    }
+  }
+
+  fieldset {
+    position: relative;
+    border: none;
+    border-top: 3px solid $primary--font-highlight-color;
+
+    &:first-child {
+      top: -37px;
+    }
+    &:last-child {
+      top: 25px;
+    }
+    .contact_me {
+      font-size: 5rem;
+      font-family: "Alata";
+    }
+    .contact_me2 {
+      font-size: 5rem;
+      font-family: "Alata";
+    }
+
+    legend {
+      font-size: 2rem;
+      text-align: center;
+      margin: auto;
+      padding-left: 5rem;
+      padding-right: 5rem;
+      display: flex;
+
+      li > a > svg {
+        transform: scale(0.6);
+      }
+    }
+  }
+}
+
+.thanks_messahe {
+  display: flex;
+  height: 30rem;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-size: 6rem;
+    color: $primary--font-highlight-color;
+    font-family: "Cabin Sketch";
+  }
+}

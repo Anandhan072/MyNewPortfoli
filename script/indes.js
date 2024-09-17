@@ -1,7 +1,5 @@
-"use strict";
 import logo from "../img/skils_icons.svg";
 import trusshine from "../img/portfolio_img/trusshine.svg";
-
 import Forkify from "../img/portfolio_img/Forkify.svg";
 import zoho from "../img/portfolio_img/zoho.svg";
 import bank from "../img/portfolio_img/bank.svg";
@@ -142,9 +140,8 @@ const addPortFolio = function () {
   let htmlEl = ``;
 
   portfolioHeadings.forEach((acc, i) => {
-    console.log("hi");
     const val = acc.toLocaleLowerCase().split(" ").join("");
-    console.log(val);
+
     htmlEl += `<div class="portfolios portfolios_${val}">
         <div class="portfolios_hover hover_${val}">
             <div class="portfolios_links">
@@ -162,7 +159,6 @@ const addPortFolio = function () {
   const portfolios_imgadd = document.querySelectorAll(`.portfolios`);
 
   portfolios_imgadd.forEach((acc, i) => {
-    console.log(window.getComputedStyle(acc).backgroundImage);
     acc.style.backgroundImage = `url(${portfolio_img[i]})`;
   });
 };
@@ -171,7 +167,6 @@ addPortFolio();
 // experience find hight
 
 about_experience_2021El.forEach((acc, i) => {
-  console.log(acc);
   let find2021 = Number.parseFloat(window.getComputedStyle(acc).height);
   ex2021[i].style.height = `${find2021 - 30}px`;
 });
@@ -183,3 +178,32 @@ about_experience_2021El.forEach((acc, i) => {
 // console.log(checcc);
 
 // checcc.style.height = `${find2021 - 10}px`;
+
+// open mail
+
+const open_emialEl = document.querySelector(".open_emial");
+
+open_emialEl.addEventListener("click", function (a) {
+  a.preventDefault();
+
+  const subject = "Testing";
+
+  const body = "testing2";
+  const recipient = "someone@example.com";
+
+  // Redirecting to Gmail compose
+  window.open(
+    `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`
+  );
+});
+
+const nav_linkEl = document.querySelector(".nav_link");
+
+nav_linkEl.addEventListener("click", function (a) {
+  a.preventDefault();
+  console.log(a.target.className);
+  if (!a.target.className.includes("alink")) return;
+  const value = a.target.dataset.nav;
+  const findView = document.getElementById(value);
+  findView.scrollIntoView({ behavior: "smooth" });
+});

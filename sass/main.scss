@@ -7,12 +7,15 @@
 
 @import url("https://fonts.googleapis.com/css?family=Alatsi"); // experiences
 
+@import url("https://fonts.googleapis.com/css?family=Cabin Sketch");
+
 @import "variables";
 @import "navbar";
 @import "aboutme";
 @import "about";
 @import "portfolio";
 @import "experience";
+@import "contact";
 /* background color  */
 * {
   padding: 0%;
@@ -42,7 +45,9 @@ body {
 .aboutme,
 .about_main,
 .Portfolio_content,
-.experience {
+.experience,
+.contact_main,
+.contact_container {
   display: block;
   position: relative;
   margin: auto 4rem;
@@ -53,6 +58,10 @@ body {
 .Portfolio_content,
 .experience {
   margin: 10rem;
+}
+
+.contact_container {
+  margin: auto 10rem;
 }
 
 h1 {

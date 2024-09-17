@@ -16,3 +16,14 @@ $primary--font-light-color: #fed48c;
 $active-skill-color: #f0bf6b;
 $inactive-skill-color: #3d3e42;
 $font-skill-color: #fefeff;
+
+/// this is for contact me _contact
+
+@mixin card-contact {
+  border: none;
+  background-color: $primary--background-color;
+  color: $primary--font-highlight-color;
+  font-size: 2rem;
+  width: 300px;
+  padding: 1rem;
+}

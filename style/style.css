@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css?family=Alata");
 @import url("https://fonts.googleapis.com/css?family=Assistant");
 @import url("https://fonts.googleapis.com/css?family=Alatsi");
+@import url("https://fonts.googleapis.com/css?family=Cabin Sketch");
 /* a tag color */
 /* font color */
 /* skill active color */
@@ -24,26 +25,24 @@
   display: block;
   position: relative;
 }
-.main_nav .aboutme .nav_bar_container .nav_btn input {
-  background-color: #3c3c40;
+.main_nav .aboutme .nav_bar_container .nav_btn button {
+  background-color: transparent;
   border: none;
-  width: 24rem;
-  height: 5rem;
-  border-radius: 8px;
-  color: #f8f9f8;
-  font-size: 2rem;
+  position: relative;
+  width: 13rem;
+  border: 1px solid #ffc86a;
+  height: 4rem;
+  color: #ffc86a;
+  font-size: 1.5rem;
 }
-.main_nav .aboutme .nav_bar_container .nav_btn input::placeholder {
-  font-family: "Anonymous Pro";
-  letter-spacing: 2px;
-  padding-left: 2rem;
-  font-size: 2rem;
-}
-.main_nav .aboutme .nav_bar_container .nav_btn img {
+.main_nav .aboutme .nav_bar_container .nav_btn button span {
   position: absolute;
-  right: 5%;
-  top: 25%;
-  transform: translate(0% -50%);
+}
+.main_nav .aboutme .nav_bar_container .nav_btn button span svg {
+  position: absolute;
+  transform: scale(0.5);
+  top: -13px;
+  left: -10px;
 }
 .main_nav .aboutme .nav_link {
   display: flex;
@@ -295,6 +294,82 @@
   line-height: 3rem;
 }
 
+.contact {
+  display: block;
+  position: relative;
+  margin-top: 10rem;
+  background-color: #3d3f43;
+}
+.contact .contact_container {
+  margin: auto;
+  display: flex;
+  width: 80rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+}
+.contact .contact_container div button {
+  border: none;
+  background-color: #30333a;
+  color: #ffc86a;
+  font-size: 2rem;
+  width: 300px;
+  padding: 1rem;
+}
+.contact .contact_container .btn_phone,
+.contact .contact_container .btn_address {
+  border: none;
+  background-color: #30333a;
+  color: #ffc86a;
+  font-size: 2rem;
+  width: 300px;
+  padding: 1rem;
+  text-align: center;
+}
+.contact fieldset {
+  position: relative;
+  border: none;
+  border-top: 3px solid #ffc86a;
+}
+.contact fieldset:first-child {
+  top: -37px;
+}
+.contact fieldset:last-child {
+  top: 25px;
+}
+.contact fieldset .contact_me {
+  font-size: 5rem;
+  font-family: "Alata";
+}
+.contact fieldset .contact_me2 {
+  font-size: 5rem;
+  font-family: "Alata";
+}
+.contact fieldset legend {
+  font-size: 2rem;
+  text-align: center;
+  margin: auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  display: flex;
+}
+.contact fieldset legend li > a > svg {
+  transform: scale(0.6);
+}
+
+.thanks_messahe {
+  display: flex;
+  height: 30rem;
+  align-items: center;
+  justify-content: center;
+}
+.thanks_messahe h1 {
+  font-size: 6rem;
+  color: #ffc86a;
+  font-family: "Cabin Sketch";
+}
+
 /* background color  */
 * {
   padding: 0%;
@@ -327,7 +402,9 @@ body {
 .aboutme,
 .about_main,
 .Portfolio_content,
-.experience {
+.experience,
+.contact_main,
+.contact_container {
   display: block;
   position: relative;
   margin: auto 4rem;
@@ -339,6 +416,10 @@ body {
 .Portfolio_content,
 .experience {
   margin: 10rem;
+}
+
+.contact_container {
+  margin: auto 10rem;
 }
 
 h1 {

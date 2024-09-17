@@ -13,27 +13,24 @@
       .nav_btn {
         display: block;
         position: relative;
-        input {
-          background-color: #3c3c40;
+        button {
+          background-color: transparent;
           border: none;
-          width: 24rem;
-          height: 5rem;
-          border-radius: 8px;
-          color: #f8f9f8;
-          font-size: 2rem;
-
-          &::placeholder {
-            font-family: "Anonymous Pro";
-            letter-spacing: 2px;
-            padding-left: 2rem;
-            font-size: 2rem;
+          position: relative;
+          width: 13rem;
+          border: 1px solid $primary--font-highlight-color;
+          height: 4rem;
+          color: $primary--font-highlight-color;
+          font-size: 1.5rem;
+          span {
+            position: absolute;
+            svg {
+              position: absolute;
+              transform: scale(0.5);
+              top: -13px;
+              left: -10px;
+            }
           }
-        }
-        img {
-          position: absolute;
-          right: 5%;
-          top: 25%;
-          transform: translate(0% -50%);
         }
       }
     }
