@@ -256,7 +256,13 @@ my_Form.addEventListener("submit", function (a) {
       body: JSON.stringify(emailData),
     })
       .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then((data) => {
+        console.log(data);
+        username_idEl.value = "";
+        email_idEl.value = "";
+        phone_idEl.value = "";
+        describe_idEl.value = "";
+      })
       .catch((error) => console.error("Error:", error));
   };
 
