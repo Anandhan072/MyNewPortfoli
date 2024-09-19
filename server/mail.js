@@ -17,7 +17,13 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://anandhanportfolio.netlify.app", // Change this to your frontend URL
+    methods: "GET, POST, PUT, DELETE, OPTIONS",
+    allowedHeaders: "Content-Type, Authorization",
+  })
+);
 app.use(express.json());
 
 const url = `https://mail.zoho.com/api/accounts/8929903000000008002/messages`;
