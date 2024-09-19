@@ -44,14 +44,14 @@
           display: flex;
           justify-content: space-between;
           h2 {
-            font-family: "Alatsi";
+            font-family: $font_experience;
           }
           p {
-            font-size: "LXGW WenKai Mono TC";
+            font-size: $font_pTag;
           }
         }
         .experience_describe {
-          font-size: "LXGW WenKai Mono TC";
+          font-size: $font_pTag;
           line-height: 3rem;
         }
       }

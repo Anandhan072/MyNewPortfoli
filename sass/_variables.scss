@@ -1,5 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Anonymous Pro");
+@import url("https://fonts.googleapis.com/css?family=Bungee");
+@import url("https://fonts.googleapis.com/css?family=Acme");
+@import url("https://fonts.googleapis.com/css?family=LXGW WenKai Mono TC");
+@import url("https://fonts.googleapis.com/css?family=Alata");
+@import url("https://fonts.googleapis.com/css?family=Assistant");
+@import url("https://fonts.googleapis.com/css?family=Alatsi");
+@import url("https://fonts.googleapis.com/css?family=Cabin Sketch");
+
+$font_nav: "Anonymous Pro"; // nav link font
+$font_myLog: "Bungee"; // my logo
+$font_header: "Acme"; // header
+$font_pTag: "LXGW WenKai Mono TC"; // p tag
+$font_h2: "Alata"; //h2 tag
+$font_hover: "Assistant";
+$font_experience: "Alatsi";
+$font_thanks: "Cabin Sketch";
+
 $primary--background-color: #30333a;
 $secondary--background-color: #34343b;
+$content--background-color: #3d3f43;
 
 $primary--font-highlight-color: #ffc86a;
 
@@ -17,13 +36,16 @@ $active-skill-color: #f0bf6b;
 $inactive-skill-color: #3d3e42;
 $font-skill-color: #fefeff;
 
-/// this is for contact me _contact
+/*profile hover */
 
+$profile--background-hover: rgb(0, 0, 0, 0.6);
+
+/// this is for contact me _contact
 @mixin card-contact {
   border: none;
   background-color: $primary--background-color;
   color: $primary--font-highlight-color;
-  font-size: 2rem;
+  font-size: 1.3rem;
   width: 300px;
   padding: 1rem;
 }

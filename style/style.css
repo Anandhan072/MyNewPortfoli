@@ -9,6 +9,7 @@
 /* a tag color */
 /* font color */
 /* skill active color */
+/*profile hover */
 .main_nav {
   background-color: #34343b;
   display: block;
@@ -294,34 +295,122 @@
 }
 
 .contact {
-  display: block;
   position: relative;
   margin-top: 10rem;
   background-color: #3d3f43;
 }
 .contact .contact_container {
-  margin: auto;
   display: flex;
-  width: 80rem;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.contact .contact_container .contact_container1 .form_check {
+  display: flex;
+  flex-flow: column wrap;
+}
+.contact .contact_container .contact_container1 .form_check span {
+  position: relative;
+}
+.contact .contact_container .contact_container1 .form_check span label {
+  position: absolute;
+}
+.contact .contact_container .contact_container1 .form_check span label svg {
+  transform: scale(0.6);
+}
+.contact .contact_container .contact_container1 .form_check span input {
+  width: 35rem;
+  height: 4rem;
+  margin-bottom: 2rem;
+  background-color: transparent;
+  border: 1px solid #ffc86a;
+  color: #e5e4e7;
+  padding: 1rem 4rem;
+}
+.contact .contact_container .contact_container1 .form_check span input::placeholder {
+  padding: 3rem;
+}
+.contact .contact_container .contact_container1 .form_check span input:focus {
+  outline: none;
+}
+.contact .contact_container .contact_container1 .form_check span textarea {
+  width: 35rem;
+  height: 6rem;
+  margin-bottom: 2rem;
+  resize: none;
+  background-color: transparent;
+  border: 1px solid #ffc86a;
+  padding-top: 1rem;
+  padding-left: 4rem;
+  color: #e5e4e7;
+}
+.contact .contact_container .contact_container1 .form_check span textarea::placeholder {
+  padding: 0;
+  padding-left: 3rem;
+  padding-top: 1rem;
+}
+.contact .contact_container .contact_container1 .form_check span textarea:focus {
+  outline: none;
+}
+.contact .contact_container .contact_container1 .form_check .submit_iddrag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.contact .contact_container .contact_container1 .form_check .submit_iddrag .file_drag {
+  display: none;
+  position: relative;
+  border: 1px solid #ffc86a;
+  height: 4rem;
+  top: -10px;
+}
+.contact .contact_container .contact_container1 .form_check .submit_iddrag .file_drag .drag_drop {
+  position: absolute;
+  font-size: 1rem;
+  width: 8rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, -50%);
+}
+.contact .contact_container .contact_container1 .form_check .submit_iddrag span #file_id {
+  opacity: 0;
+}
+.contact .contact_container .contact_container1 .form_check .submit_iddrag span input {
+  width: 15rem;
+}
+.contact .contact_container .contact_container2 {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
   gap: 4rem;
 }
-.contact .contact_container div button {
+.contact .contact_container .contact_container2 div {
+  position: relative;
+}
+.contact .contact_container .contact_container2 div span {
+  position: absolute;
+  top: -1px;
+  left: 3px;
+}
+.contact .contact_container .contact_container2 div span .mail_svg {
+  transform: scale(0.5);
+}
+.contact .contact_container .contact_container2 div button {
   border: none;
   background-color: #30333a;
   color: #ffc86a;
-  font-size: 2rem;
+  font-size: 1.3rem;
   width: 300px;
   padding: 1rem;
 }
-.contact .contact_container .btn_phone,
-.contact .contact_container .btn_address {
+.contact .contact_container .contact_container2 .btn_phone,
+.contact .contact_container .contact_container2 .btn_address {
   border: none;
   background-color: #30333a;
   color: #ffc86a;
-  font-size: 2rem;
+  font-size: 1.3rem;
   width: 300px;
   padding: 1rem;
   text-align: center;

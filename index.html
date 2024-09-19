@@ -44,7 +44,7 @@
                 <p>I'M <strong><svg width="200" height="30" fill="none">
                     <text id="myname" y="30">Anandhan</text>
                  </svg></strong> <br>
-                    Aspiring as webdevloper </p>
+                    Aspiring as a webdevloper </p>
                     
                         <button class="open_emial">Contact Me</button>
                     
@@ -187,75 +187,64 @@
 
         </div>
         <div class="contact" id="contact_content">
+    
             <fieldset>
                 <legend class="contact_me">Contact Me</legend>
               </fieldset>
-            
-                <div class="contact_container">
-                    <div class="btn_mail"><button>anandhans072@gmail.com</button></div>
-                    <div class="btn_phone">(+91) 8110859072</div>
-                    <div class="btn_address"><address>India, TamilNadu</address></div>   
+
+              <div class="contact_container">
+            <!-- form Request-->
+           <div class="contact_container1">
+            <form action="/submit" method="POST" class="form_check">
+                <span><label for="username"><svg width="40" height="40" fill="none">
+                    <use href="./img/symbol.svg#icon-user"></use>
+                </svg></label>
+                    <input type="text" name="User Name" id="username_id" placeholder="Enter The Your Name" required></span>
+                <span><label for="email_id"><svg width="40" height="40" fill="none">
+                    <use href="./img/symbol.svg#icon-mail"></use>
+                </svg></label>
+                    <input type="email" name="User Mail ID" id="email_id" placeholder="Enter The Your Mail ID " required></span>
+                <span><label for="phone_id" >
+                    <svg width="40" height="40" fill="none">
+                        <use href="./img/symbol.svg#icon-phone"></use>
+                    </svg>
+                </label>
+                    <input type="number" name="Phone Number" id="phone_id" placeholder="Enter Your Phone Number"></span>
+                <span><label for="describe_id" >
+                    <svg width="40" height="40" fill="none">
+                        <use href="./img/symbol.svg#icon-text"></use>
+                    </svg>
+                </label>
+                    <textarea name="describe" id="describe_id" placeholder="Text Area"></textarea></span>
+                    <span class="submit_iddrag">
+                        <span class="file_drag"><label for="file_id">
+                            <svg width="40" height="40" fill="none">
+                            <use href="./img/symbol.svg#icon-drag"></use>
+                        </svg> <span class="drag_drop">Drag and Drop</span> </label> 
+                            <input type="file" name="File Attachment" id="file_id" ></span>
+                        <span><label for="submit_id"></label>
+                            <input type="submit" name="submit" id="submit_id"></span>
+                    </span>
+              
+
+            </form>
+           </div>
+<!-- form Request-->
+                <div class="contact_container2">
+                    <div class="btn_mail"><span><svg width="40" height="40" fill="none" class="mail_svg">
+                        <use href="./img/symbol.svg#icon-mail"></use>
+                    </svg></span><button>anandhans072@gmail.com</button></div>
+                    <div class="btn_phone"><span><svg width="40" height="40" fill="none" class="mail_svg">
+                        <use href="./img/symbol.svg#icon-phone"></use>
+                    </svg></span>(+91) 8110859072</div>
+                    <div class="btn_address"><address>
+                        <span><svg width="40" height="40" fill="none" class="mail_svg">
+                            <use href="./img/symbol.svg#icon-map"></use>
+                        </svg></span>India, TamilNadu</address></div>   
                 </div>
               
 
-           
-                <!-- <div class="contact_container1">
-                    <form action="" class="contact_form">
-                        <span>
-                            <label for="name">
-                                <svg width="39" height="39" fill="none">
-                                    <use href="./img/symbol.svg#icon-user"></use>
-                                </svg>
-                            </label>
-                        <input type="text" name="customerName" id="name" placeholder="Enter your Name" required>
-                        </span>
-                        <span>
-                            <label for="email">
-                                <svg width="43" height="43" fill="none" transform="scale(0.8)">
-                                    <use href="./img/symbol.svg#icon-mail" ></use>
-                                </svg>
-                            </label>
-                            <input type="email" name="customerEmail" id="email" placeholder="Enter your email" required>
-                        </span>
-                        <span>
-                            <label for="number">
-                                <svg width="39" height="39" fill="none">
-                                    <use href="./img/symbol.svg#icon-phone"></use>
-                                </svg>
-                            </label>
-                        <input type="number" name="customerNumber" id="number" placeholder="Enter your mobile number">
-                        </span>
-                       
-                        <span>
-                            <label for="subject">
-                                <svg width="39" height="39" fill="none">
-                                    <use href="./img/symbol.svg#icon-sub"></use>
-                                </svg>
-                            </label>
-                        <input type="text" name="customerSubject" id="subject" placeholder="Enter your Subject" required>
-                        </span>
-                        <span> <label for="textarea" >
-                            <svg width="39" height="39" fill="none">
-                                <use href="./img/symbol.svg#icon-text"></use>
-                            </svg>
-                        </label>
-                            <textarea name="message" id="texta" required></textarea></span>
-                        <span >
-                           <span>
-                            <input type="submit" value="submit" class="submit_btn">
-                           </span>
-                           
-                        </span>
-                        
-                        
-                       
-
-
-                    </form>
-
-                </div> -->
-               
-              
+            </div>
             
             <fieldset>
                 <legend class="contact_me2">
@@ -286,3 +275,6 @@
     
 </body>
 </html>
+
+
+

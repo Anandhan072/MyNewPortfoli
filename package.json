@@ -17,12 +17,18 @@
     "@babel/core": "^7.25.2",
     "@babel/plugin-transform-runtime": "^7.25.4",
     "@babel/preset-env": "^7.25.4",
+    "buffer": "^6.0.3",
+    "nodemon": "^3.1.5",
     "parcel": "^2.12.0",
+    "process": "^0.11.10",
     "sass": "^1.78.0"
   },
   "dependencies": {
     "@parcel/transformer-svg-react": "^2.12.0",
+    "axios": "^1.7.7",
     "core-js": "^3.38.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
     "regenerator-runtime": "^0.14.1"
   }
 }

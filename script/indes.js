@@ -7,6 +7,7 @@ import map from "../img/portfolio_img/map.svg";
 import guess from "../img/portfolio_img/guess.svg";
 
 /// My log animi function
+import axios from "axios";
 import "core-js/stable";
 
 import "core-js/stable";
@@ -14,11 +15,11 @@ import "regenerator-runtime/runtime";
 import { async } from "regenerator-runtime";
 
 const atagEl = document.querySelector(".atag");
-console.log(atagEl);
 const skills_iconEl = document.querySelector(".skills_icon");
 const portfoliosEl = document.querySelector(".portfolios_bio");
 const about_experience_2021El = document.querySelectorAll(".about_experience_2021");
 const ex2021 = document.querySelectorAll(`.experience_hr_2021`);
+
 let skillsEl = "";
 let percentage = 0;
 let offsetValue = 0;
@@ -206,9 +207,58 @@ const nav_linkEl = document.querySelector(".nav_link");
 
 nav_linkEl.addEventListener("click", function (a) {
   a.preventDefault();
-  console.log(a.target.className);
   if (!a.target.className.includes("alink")) return;
   const value = a.target.dataset.nav;
   const findView = document.getElementById(value);
   findView.scrollIntoView({ behavior: "smooth" });
+});
+
+const dragElement = document.getElementById("file_id");
+
+dragElement.addEventListener("change", function (a) {
+  a.preventDefault();
+  const file = dragElement.files[0].name;
+  console.log(file);
+  console.log("hello");
+});
+
+const username_idEl = document.querySelector("#username_id");
+const email_idEl = document.querySelector("#email_id");
+const phone_idEl = document.querySelector("#phone_id");
+const describe_idEl = document.querySelector("#describe_id");
+const submit_idEl = document.querySelector("#submit_id");
+
+const my_Form = document.querySelector(".form_check");
+
+my_Form.addEventListener("submit", function (a) {
+  a.preventDefault();
+
+  const emailData = {
+    fromAddress: "anandhan.sm@zohocorp.com",
+    toAddress: email_idEl.value,
+    subject: "Email - Always and Forever",
+    content: `<p>Hi Team,</p>
+<span>&ensp;&ensp;<p>User Name: ${username_idEl.value} </p>
+<p>Email ID: ${email_idEl.value}</p>
+<p>Phone Number: ${phone_idEl.value}</p>
+<p>content: ${describe_idEl.value}</p>
+</span>
+`,
+    askReceipt: "yes",
+  };
+
+  const sentMail = async function () {
+    fetch("https://app-10088653757.development.catalystappsail.com/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(emailData),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.error("Error:", error));
+  };
+
+  sentMail();
 });
