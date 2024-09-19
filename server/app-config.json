@@ -1,0 +1,8 @@
+{
+  "command": "node mail.js",
+  "build_path": "/Users/anand-11912/Documents/New PortFolio/server",
+  "stack": "node18",
+  "env_variables": {},
+  "memory": 256,
+  "scripts": {}
+}
