@@ -222,49 +222,26 @@ dragElement.addEventListener("change", function (a) {
   console.log("hello");
 });
 
-const username_idEl = document.querySelector("#username_id");
-const email_idEl = document.querySelector("#email_id");
-const phone_idEl = document.querySelector("#phone_id");
-const describe_idEl = document.querySelector("#describe_id");
-const submit_idEl = document.querySelector("#submit_id");
-
 const my_Form = document.querySelector(".form_check");
 
 my_Form.addEventListener("submit", function (a) {
   a.preventDefault();
-
-  const emailData = {
-    fromAddress: "anandhan.sm@zohocorp.com",
-    toAddress: email_idEl.value,
-    subject: "Email - Always and Forever",
-    content: `<p>Hi Team,</p>
-<span>&ensp;&ensp;<p>User Name: ${username_idEl.value} </p>
-<p>Email ID: ${email_idEl.value}</p>
-<p>Phone Number: ${phone_idEl.value}</p>
-<p>content: ${describe_idEl.value}</p>
-</span>
-`,
-    askReceipt: "yes",
-  };
+  const formElement = my_Form.elements;
 
   const sentMail = async function () {
-    fetch("http://localhost:3000/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(emailData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        username_idEl.value = "";
-        email_idEl.value = "";
-        phone_idEl.value = "";
-        describe_idEl.value = "";
-      })
-      .catch((error) => console.error("Error:", error));
+    fetch("127.0.0.1:3000/").then((data) => console.log(data));
   };
 
   sentMail();
+
+  console.log(formElement);
+
+  my_Form.reset();
 });
+
+// method: "POST",
+// headers: {
+//   "Content-Type": "application/json",
+// },
+
+// body: JSON.stringify(emailData),
