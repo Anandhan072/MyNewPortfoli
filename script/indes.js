@@ -229,7 +229,9 @@ my_Form.addEventListener("submit", function (a) {
   const formElement = my_Form.elements;
 
   const sentMail = async function () {
-    fetch("127.0.0.1:3000/").then((data) => console.log(data));
+    fetch("https://app-10088653757.development.catalystappsail.com/").then((data) =>
+      console.log(data)
+    );
   };
 
   sentMail();
