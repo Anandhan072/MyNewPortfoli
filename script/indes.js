@@ -248,7 +248,7 @@ my_Form.addEventListener("submit", function (a) {
   };
 
   const sentMail = async function () {
-    fetch("https://app-10088653757.development.catalystappsail.com/send-email", {
+    fetch("http://localhost:3000/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

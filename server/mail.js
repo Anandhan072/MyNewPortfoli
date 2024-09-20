@@ -11,19 +11,17 @@
 
 // refresh token: 1000.0f5dce3ad0c5fcfb8a9da1bf1731889d.0435ea50a59d528af8bfdacd18a8f072
 
+// origin: "https://anandhanportfolio.netlify.app", // Change this to your frontend URL
+// methods: "GET, POST, PUT, DELETE, OPTIONS",
+// allowedHeaders: "Content-Type, Authorization",
+
 const express = require(`express`);
 const axios = require("axios");
-const cors = require("cors");
+// const cors = require("cors");
 
 const app = express();
 
-app.use(
-  cors({
-    origin: "https://anandhanportfolio.netlify.app", // Change this to your frontend URL
-    methods: "GET, POST, PUT, DELETE, OPTIONS",
-    allowedHeaders: "Content-Type, Authorization",
-  })
-);
+// app.options("*", cors());
 app.use(express.json());
 
 const url = `https://mail.zoho.com/api/accounts/8929903000000008002/messages`;
@@ -45,16 +43,17 @@ app.post("/send-email", async (req, res) => {
     };
 
     console.log(req.body.toAddress);
-    const response = axios.post(url, req.body, {
+    const response = await axios.post(url, req.body, {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
         Authorization: `Zoho-oauthtoken ${refreshToken}`,
+        "Access-Control-Allow-Origin": "*",
       },
     });
     res.json({
       status: "message successfully sended",
-      data: response,
+      data: "success",
     });
   } catch (err) {
     console.log(err);
