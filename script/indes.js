@@ -229,9 +229,10 @@ my_Form.addEventListener("submit", function (a) {
   const formElement = my_Form.elements;
 
   const sentMail = async function () {
-    fetch("https://app-10088653757.development.catalystappsail.com/").then((data) =>
-      console.log(data)
-    );
+    console.log("hi");
+    const responce = await fetch("http://localhost:3001/");
+
+    console.log(responce);
   };
 
   sentMail();

@@ -3,19 +3,28 @@ const axios = require("axios");
 const cors = require("cors");
 const app = express();
 
+// Enable CORS middleware
 app.use(cors());
 
-app.use(express.json);
+// Middleware to parse incoming JSON requests
+app.use(express.json()); // Note the parentheses
 
+// Basic GET route
 app.get("/", (req, res) => {
-  res.send("hello message received");
+  console.log("hi");
+  res.json({
+    status: "successfully",
+  });
 });
 
+// Define the port (default to 3000 if no environment variable is set)
 const port = process.env.X_ZOHO_CATALYST_LISTEN_PORT || 3000;
 
+// Start the server
 app.listen(port, () => {
-  console.log(`server started ${port}`);
+  console.log(`Server started on port ${port}`);
 });
+
 //process.env.X_ZOHO_CATALYST_LISTEN_PORT
 
 /// code: 1000.ba659333c04ae0edd4f421ec8fc581f9.9144c0ba9d6ad371b9b606fd988b473a
