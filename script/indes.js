@@ -230,7 +230,7 @@ my_Form.addEventListener("submit", function (a) {
 
   const sentMail = async function () {
     console.log("hi");
-    const responce = await fetch(" http://localhost:3001/");
+    const responce = await fetch("https://app-10088653757.development.catalystappsail.com/");
 
     const data = await responce.json();
     console.log(data);
