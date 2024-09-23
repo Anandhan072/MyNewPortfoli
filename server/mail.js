@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json()); // Note the parentheses
 
 // Basic GET route
-app.get("/", async (req, res) => {
+app.get("https://app-10088653757.development.catalystappsail.com/", async (req, res) => {
   const refreshUrl = `https://accounts.zoho.com/oauth/v2/token?refresh_token=1000.0f5dce3ad0c5fcfb8a9da1bf1731889d.0435ea50a59d528af8bfdacd18a8f072&client_id=1000.2K9G18F36X1I9D7F0LYCOBNL4BQB6L&client_secret=2cbe4852ecf3a5c31503771eb3fef13582f4538662&grant_type=refresh_token`;
 
   res.json({
