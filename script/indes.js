@@ -7,8 +7,6 @@ import map from "../img/portfolio_img/map.svg";
 import guess from "../img/portfolio_img/guess.svg";
 
 /// My log animi function
-import axios from "axios";
-import "core-js/stable";
 
 import "core-js/stable";
 import "regenerator-runtime/runtime";
@@ -213,14 +211,14 @@ nav_linkEl.addEventListener("click", function (a) {
   findView.scrollIntoView({ behavior: "smooth" });
 });
 
-const dragElement = document.getElementById("file_id");
+// const dragElement = document.getElementById("file_id");
 
-dragElement.addEventListener("change", function (a) {
-  a.preventDefault();
-  const file = dragElement.files[0].name;
-  console.log(file);
-  console.log("hello");
-});
+// dragElement.addEventListener("change", function (a) {
+//   a.preventDefault();
+//   const file = dragElement.files[0].name;
+//   console.log(file);
+//   console.log("hello");
+// });
 
 const my_Form = document.querySelector(".form_check");
 
@@ -230,9 +228,28 @@ my_Form.addEventListener("submit", function (a) {
 
   const sentMail = async function () {
     console.log("hi");
-    const responce = await fetch("https://app-10088653757.development.catalystappsail.com/");
+
+    const form_data = {
+      fromAddress: "anandhan.sm@zohocorp.com",
+      toAddress: `${formElement[1].value}`,
+      subject: "Thanks for reaching out to us.",
+      content: `<p>Hi ${formElement[0].value},</p><br><p>We have received your information, and we will get back to you soon, </p></span>`,
+      askReceipt: "yes",
+    };
+
+    const responce = await fetch(
+      "https://app-10088653757.development.catalystappsail.com/sendmail",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form_data),
+      }
+    );
 
     const data = await responce.json();
+
     console.log(data);
   };
 
@@ -242,10 +259,3 @@ my_Form.addEventListener("submit", function (a) {
 
   my_Form.reset();
 });
-
-// method: "POST",
-// headers: {
-//   "Content-Type": "application/json",
-// },
-
-// body: JSON.stringify(emailData),

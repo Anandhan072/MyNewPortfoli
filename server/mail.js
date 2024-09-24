@@ -1,20 +1,42 @@
 const express = require("express");
 const axios = require("axios");
-const cors = require("cors");
+// const cors = require("cors");
 const app = express();
 
 // Enable CORS middleware
-app.use(cors());
+
+// const corsOptions = {
+//   origin: "http://localhost:1234", // Change to your frontend origin or '*' to allow all
+//   methods: ["GET", "POST", "OPTIONS"],
+//   allowedHeaders: ["Content-Type", "Authorization"],
+// };
+// app.use(cors(corsOptions));
 
 // Middleware to parse incoming JSON requests
 app.use(express.json()); // Note the parentheses
 
 // Basic GET route
-app.get("/", async (req, res) => {
-  const refreshUrl = `https://accounts.zoho.com/oauth/v2/token?refresh_token=1000.0f5dce3ad0c5fcfb8a9da1bf1731889d.0435ea50a59d528af8bfdacd18a8f072&client_id=1000.2K9G18F36X1I9D7F0LYCOBNL4BQB6L&client_secret=2cbe4852ecf3a5c31503771eb3fef13582f4538662&grant_type=refresh_token`;
+app.post("/sendmail", async (req, res) => {
+  const refreshUrl = `https://accounts.zoho.com/oauth/v2/token?refresh_token=1000.361fb8dafc764a442c92aad6e09205bf.f52488f6e2ad707578e61e44da850223&client_id=1000.2K9G18F36X1I9D7F0LYCOBNL4BQB6L&client_secret=2cbe4852ecf3a5c31503771eb3fef13582f4538662&grant_type=refresh_token`;
+
+  console.log(req.body);
+
+  const refresh_token = await axios.post(refreshUrl);
+  const refresh_ID = await refresh_token.data.access_token;
+
+  const sendMailURL = `https://mail.zoho.com/api/accounts/8929903000000008002/messages`;
+
+  const sentMail = await axios.post(sendMailURL, req.body, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: `Zoho-oauthtoken ${refresh_ID}`,
+    },
+  });
 
   res.json({
-    status: "done",
+    status: "email sent successfully",
+    data: sentMail.data,
   });
 });
 
@@ -28,7 +50,7 @@ app.listen(port, () => {
 
 //process.env.X_ZOHO_CATALYST_LISTEN_PORT
 
-/// code: 1000.ba659333c04ae0edd4f421ec8fc581f9.9144c0ba9d6ad371b9b606fd988b473a
+/// code: 1000.2f3b258b2ac7bb44762f125636eaff92.55fb1e254444eb3593ff40b87b358369
 
 //"access_token": "1000.7d7c32d6def14b4ff242fca82ba90fa4.7248756dee3f0f0ae546165ba4e3b9b4",
 
