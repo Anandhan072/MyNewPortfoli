@@ -1,4 +1,4 @@
-import logo from "../img/skils_icons.svg";
+import logo from "url:../img/skils_icons.svg";
 import trusshine from "../img/portfolio_img/trusshine.svg";
 import Forkify from "../img/portfolio_img/Forkify.svg";
 import zoho from "../img/portfolio_img/zoho.svg";
