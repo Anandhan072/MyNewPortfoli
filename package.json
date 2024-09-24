@@ -25,7 +25,6 @@
     "sass": "^1.78.0"
   },
   "dependencies": {
-    "@parcel/transformer-svg-react": "^2.12.0",
     "axios": "^1.7.7",
     "core-js": "^3.38.1",
     "cors": "^2.8.5",
