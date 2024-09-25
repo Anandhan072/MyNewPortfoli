@@ -110,10 +110,10 @@ skillsEl.forEach((acc) => {
 const portfolio_LinkEl = [
   `https://www.trushine-uae.com/`,
   `https://anandhan.netlify.app/`,
-  `./My Project/Zoho.com/zoho.html`,
-  `./My Project/basic_banks_site/index.html`,
-  `./My Project/leaflate map/index.html`,
-  `./My Project/Guess_Number/guess.html"`,
+  `https://zohoold.netlify.app/`,
+  `https://freebank1.netlify.app/`,
+  `https://mapty122.netlify.app/`,
+  `https://guessmynumber12.netlify.app/"`,
 ];
 
 const portfolio_content = [
@@ -134,7 +134,7 @@ const portfolio_img = [trusshine, Forkify, zoho, bank, map, guess];
         <div class="portfolios_links">
             <h2>Atala</h2>
             <span>is the provider to consider if you are looking for a cleaning service....</span><br>
-            <a href="./My Project/Zoho.com/zoho.html">See more &#8594;</a>
+            <a href="./My Project/Zoho.com/zoho.html" target="_blank">See more &#8594;</a>
         </div>
      </div>
                            
@@ -151,7 +151,7 @@ const addPortFolio = function () {
             <div class="portfolios_links">
                 <h2>${acc}</h2>
                 <span>${portfolio_content[i]}</span><br>
-                <a href="${portfolio_LinkEl[i]}">See more &#8594;</a>
+                <a href="${portfolio_LinkEl[i]}" target="_blank">See more &#8594;</a>
             </div>
          </div>
 
