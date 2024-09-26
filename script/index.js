@@ -174,16 +174,6 @@ about_experience_2021El.forEach((acc, i) => {
   let find2021 = Number.parseFloat(window.getComputedStyle(acc).height);
   ex2021[i].style.height = `${find2021 - 30}px`;
 });
-// const find2021 = Number.parseFloat(window.getComputedStyle(about_experience_2021El).height);
-
-// console.log(find2021);
-
-// const checcc = document.querySelector(`.experience_hr_2021`);
-// console.log(checcc);
-
-// checcc.style.height = `${find2021 - 10}px`;
-
-// open mail
 
 const open_emialEl = document.querySelector(".open_emial");
 
@@ -193,7 +183,7 @@ open_emialEl.addEventListener("click", function (a) {
   const subject = "Testing";
 
   const body = "testing2";
-  const recipient = "someone@example.com";
+  const recipient = "anandhan.sm@zohocorp.com";
 
   // Redirecting to Gmail compose
   window.open(
@@ -211,15 +201,6 @@ nav_linkEl.addEventListener("click", function (a) {
   findView.scrollIntoView({ behavior: "smooth" });
 });
 
-// const dragElement = document.getElementById("file_id");
-
-// dragElement.addEventListener("change", function (a) {
-//   a.preventDefault();
-//   const file = dragElement.files[0].name;
-//   console.log(file);
-//   console.log("hello");
-// });
-
 const my_Form = document.querySelector(".form_check");
 
 my_Form.addEventListener("submit", function (a) {
@@ -227,8 +208,6 @@ my_Form.addEventListener("submit", function (a) {
   const formElement = my_Form.elements;
 
   const sentMail = async function () {
-    console.log("hi");
-
     const form_data = {
       fromAddress: "anandhan.sm@zohocorp.com",
       toAddress: `${formElement[1].value}`,
@@ -249,13 +228,9 @@ my_Form.addEventListener("submit", function (a) {
     );
 
     const data = await responce.json();
-
-    console.log(data);
   };
 
   sentMail();
-
-  console.log(formElement);
 
   my_Form.reset();
 });
