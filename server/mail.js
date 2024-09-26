@@ -17,27 +17,40 @@ app.use(express.json()); // Note the parentheses
 
 // Basic GET route
 app.post("/sendmail", async (req, res) => {
-  const refreshUrl = `https://accounts.zoho.com/oauth/v2/token?refresh_token=1000.361fb8dafc764a442c92aad6e09205bf.f52488f6e2ad707578e61e44da850223&client_id=1000.2K9G18F36X1I9D7F0LYCOBNL4BQB6L&client_secret=2cbe4852ecf3a5c31503771eb3fef13582f4538662&grant_type=refresh_token`;
+  try {
+    const refreshUrl = `https://accounts.zoho.com/oauth/v2/token?refresh_token=1000.361fb8dafc764a442c92aad6e09205bf.f52488f6e2ad707578e61e44da850223&client_id=1000.2K9G18F36X1I9D7F0LYCOBNL4BQB6L&client_secret=2cbe4852ecf3a5c31503771eb3fef13582f4538662&grant_type=refresh_token`;
 
-  console.log(req.body);
+    console.log(req.body);
 
-  const refresh_token = await axios.post(refreshUrl);
-  const refresh_ID = await refresh_token.data.access_token;
+    const refresh_token = await axios.post(refreshUrl);
+    const refresh_ID = await refresh_token.data.access_token;
 
-  const sendMailURL = `https://mail.zoho.com/api/accounts/8929903000000008002/messages`;
+    if (!refresh_ID) throw new Error("refresh ID not generated");
 
-  const sentMail = await axios.post(sendMailURL, req.body, {
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      Authorization: `Zoho-oauthtoken ${refresh_ID}`,
-    },
-  });
+    const sendMailURL = `https://mail.zoho.com/api/accounts/8929903000000008002/messages`;
 
-  res.json({
-    status: "email sent successfully",
-    data: sentMail.data,
-  });
+    const sentMail = await axios.post(sendMailURL, req.body, {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `Zoho-oauthtoken ${refresh_ID}`,
+      },
+    });
+
+    if (!sentMail || sentMail.status !== 200) throw new Error("Failed to send email");
+
+    res.json({
+      status: "email sent successfully",
+      data: sentMail.data,
+    });
+  } catch (err) {
+    console.error("An error occurred:", err.message);
+
+    res.status(500).json({
+      status: "error",
+      message: err.message || "An error occurred",
+    });
+  }
 });
 
 // Define the port (default to 3000 if no environment variable is set)
@@ -48,21 +61,4 @@ app.listen(port, () => {
   console.log(`Server started on port ${port}`);
 });
 
-//process.env.X_ZOHO_CATALYST_LISTEN_PORT
-
-/// code: 1000.2f3b258b2ac7bb44762f125636eaff92.55fb1e254444eb3593ff40b87b358369
-
-//"access_token": "1000.7d7c32d6def14b4ff242fca82ba90fa4.7248756dee3f0f0ae546165ba4e3b9b4",
-
-// code: 1000.c30292c5ad334318d21258757ebe4f72.3eae8b7befcc016425a2ba03c9d80be6
-
 ///Accounts ID:  8929903000000008002
-
-//Message
-//1000.7b784ade722443fc86313e7794083b67.c4f9beaa640d8fa9e3a6bbc1a1d7c734
-
-// refresh token: 1000.0f5dce3ad0c5fcfb8a9da1bf1731889d.0435ea50a59d528af8bfdacd18a8f072
-
-// origin: "https://anandhanportfolio.netlify.app", // Change this to your frontend URL
-// methods: "GET, POST, PUT, DELETE, OPTIONS",
-// allowedHeaders: "Content-Type, Authorization",
