@@ -70,18 +70,16 @@ intersection.observe(atagEl);
                     */
 
 const skillsIcon = [
-  { language: "html", skill: "Intermediate", percentage: "50%" },
-  { language: "css", skill: "Intermediate", percentage: "50%" },
-  { language: "js", skill: "Intermediate", percentage: "50%" },
-  { language: "nodejs", skill: "Beginner", percentage: "50%" },
-  { language: "mongodb", skill: "Beginner", percentage: "50%" },
-  { language: "git", skill: "", percentage: "50%" },
-  { language: "sass", skill: "Intermediate", percentage: "50%" },
-  { language: "ubuntu", skill: "Intermediate", percentage: "50%" },
-  { language: "reactjs", skill: "Intermediate", percentage: "50%" },
+  { language: "html", skill: "Intermediate", percentage: "60%" },
+  { language: "css", skill: "Intermediate", percentage: "60%" },
+  { language: "js", skill: "Intermediate", percentage: "60%" },
+  { language: "nodejs", skill: "Beginner", percentage: "60%" },
+  { language: "mongodb", skill: "Beginner", percentage: "60%" },
+  { language: "git", skill: "Intermediate", percentage: "60%" },
+  { language: "sass", skill: "Intermediate", percentage: "60%" },
+  { language: "ubuntu", skill: "good", percentage: "70%" },
+  { language: "reactjs", skill: "Beginner", percentage: "35%" },
 ];
-
-const skills_about = ["I have good knowledge of HTML."];
 
 const addSkillEl = function () {
   let htmlEl = ``;
@@ -96,10 +94,10 @@ const addSkillEl = function () {
                   <span class="skill-name">${icons.language}</span>
 
                   <div class="skills-hover">
-                  <p>I have good knowledge of HTML.
+                  <p>${icons.skill}
                   </p>
                   <div>
-                  <div></div>
+                  <div class="skill-percentage" ;"></div>
                   </div>
                   </div>
               </div> `;
@@ -110,6 +108,21 @@ const addSkillEl = function () {
 };
 
 addSkillEl();
+skillsEl.forEach((acc, i) => {
+  acc.addEventListener("mouseenter", function (a) {
+    let closestSkills = a.target.closest(".skills");
+    let skillPercentage = closestSkills.querySelector(".skill-percentage");
+    skillPercentage.style.width = skillsIcon[i].percentage;
+  });
+});
+
+skillsEl.forEach((acc, i) => {
+  acc.addEventListener("mouseleave", function (a) {
+    let closestSkills = a.target.closest(".skills");
+    let skillPercentage = closestSkills.querySelector(".skill-percentage");
+    skillPercentage.style.width = "0%";
+  });
+});
 
 let values = 1;
 skillsEl.forEach((acc) => {
