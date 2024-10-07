@@ -73,12 +73,12 @@ const skillsIcon = [
   { language: "html", skill: "Intermediate", percentage: "50%" },
   { language: "css", skill: "Intermediate", percentage: "50%" },
   { language: "js", skill: "Intermediate", percentage: "50%" },
-  { language: "node", skill: "Beginner", percentage: "50%" },
+  { language: "node js", skill: "Beginner", percentage: "50%" },
   { language: "mongodb", skill: "Beginner", percentage: "50%" },
   { language: "git", skill: "", percentage: "50%" },
   { language: "sass", skill: "Intermediate", percentage: "50%" },
   { language: "ubuntu", skill: "Intermediate", percentage: "50%" },
-  { language: "react", skill: "Intermediate", percentage: "50%" },
+  { language: "react js", skill: "Intermediate", percentage: "50%" },
 ];
 
 const skills_about = ["I have good knowledge of HTML."];
