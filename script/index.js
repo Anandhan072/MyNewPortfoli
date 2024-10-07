@@ -18,6 +18,9 @@ const portfoliosEl = document.querySelector(".portfolios_bio");
 const about_experience_2021El = document.querySelectorAll(".about_experience_2021");
 const ex2021 = document.querySelectorAll(`.experience_hr_2021`);
 
+const Skill_dashArray = document.querySelectorAll(".skill-strokeDash");
+const skills_hover_array = document.querySelectorAll(".skills-hover");
+
 let skillsEl = "";
 let percentage = 0;
 let offsetValue = 0;
@@ -66,19 +69,39 @@ intersection.observe(atagEl);
 
                     */
 
-const skillsIcon = [`html`, `css`, `js`, `nodejs`, `mongodb`, `git`, `sass`, `ubuntu`];
+const skillsIcon = [
+  { language: "html", skill: "Intermediate", percentage: "50%" },
+  { language: "css", skill: "Intermediate", percentage: "50%" },
+  { language: "js", skill: "Intermediate", percentage: "50%" },
+  { language: "node", skill: "Beginner", percentage: "50%" },
+  { language: "mongodb", skill: "Beginner", percentage: "50%" },
+  { language: "git", skill: "", percentage: "50%" },
+  { language: "sass", skill: "Intermediate", percentage: "50%" },
+  { language: "ubuntu", skill: "Intermediate", percentage: "50%" },
+  { language: "react", skill: "Intermediate", percentage: "50%" },
+];
+
+const skills_about = ["I have good knowledge of HTML."];
 
 const addSkillEl = function () {
   let htmlEl = ``;
   skillsIcon.forEach((icons) => {
-    htmlEl += `<div class="skills skills-${icons}">
+    htmlEl += `<div class="skills skills-${icons.language}">
                 <span class="skill-icon">
                     <svg width="80" height="80" fill="none">
-                        <use href="${logo}#icon-${icons}"></use> 
+                        <use href="${logo}#icon-${icons.language}"></use> 
 
                     </svg>
                   </span><br>
-                  <span class="skill-name">${icons}</span>
+                  <span class="skill-name">${icons.language}</span>
+
+                  <div class="skills-hover">
+                  <p>I have good knowledge of HTML.
+                  </p>
+                  <div>
+                  <div></div>
+                  </div>
+                  </div>
               </div> `;
   });
 
