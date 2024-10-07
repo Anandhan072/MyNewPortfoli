@@ -221,16 +221,16 @@
 }
 
 .portfolios_bio {
-  display: grid;
-  grid-template-columns: repeat(3, 350px);
+  display: flex;
   gap: 5rem;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   margin: auto 6rem;
 }
 .portfolios_bio .portfolios {
   background-image: url("../img/portfolio_img/guess.svg");
-  width: 100%;
+  width: 37rem;
   height: 40rem;
   background-repeat: no-repeat;
   background-size: cover;

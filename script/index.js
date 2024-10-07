@@ -5,6 +5,8 @@ import zoho from "../img/portfolio_img/zoho.svg";
 import bank from "../img/portfolio_img/bank.svg";
 import map from "../img/portfolio_img/map.svg";
 import guess from "../img/portfolio_img/guess.svg";
+import travel from "../img/portfolio_img/travel.svg";
+import split from "../img/portfolio_img/split.svg";
 
 /// My log animi function
 
@@ -150,6 +152,8 @@ const portfolio_LinkEl = [
   `https://freebank1.netlify.app/`,
   `https://mapty122.netlify.app/`,
   `https://guessmynumber12.netlify.app/"`,
+  `https://travelcheck12.netlify.app`,
+  `https://eatsplit12.netlify.app`,
 ];
 
 const portfolio_content = [
@@ -159,11 +163,22 @@ const portfolio_content = [
   `A banking site with minimal functionality to keep the site as a simple banking site.`,
   "first third-party library integration with the Leaflet library",
   `A simple game to find a number, just for creating a learning experience.`,
+  `First basic React travel checklist app`,
+  `Creating split application for expenses`,
 ];
 
-const portfolioHeadings = [`TruShine`, `Forkify`, `Zoho`, `Bank`, `Leaflate`, `Guess Number`];
+const portfolioHeadings = [
+  `TruShine`,
+  `Forkify`,
+  `Zoho`,
+  `Bank`,
+  `Leaflate`,
+  `Guess Number`,
+  `Travel List`,
+  `Eat Split`,
+];
 
-const portfolio_img = [trusshine, Forkify, zoho, bank, map, guess];
+const portfolio_img = [trusshine, Forkify, zoho, bank, map, guess, travel, split];
 
 /* <div class="portfolios portfolios_trushine">
     <div class="portfolios_hover hover_trushine">
