@@ -126,21 +126,6 @@ skillsEl.forEach((acc, i) => {
   });
 });
 
-let values = 1;
-skillsEl.forEach((acc) => {
-  acc.addEventListener("click", function (a) {
-    a.preventDefault();
-    if (values === 1) {
-      values = a.target.closest(`.skills`);
-      values.classList.add(`skills_active`);
-    } else {
-      values.classList.remove(`skills_active`);
-      values = a.target.closest(`.skills`);
-      values.classList.add(`skills_active`);
-    }
-  });
-});
-
 ///skills add html tag
 
 ///portfolio add html
