@@ -102,7 +102,7 @@
   left: 2rem;
 }
 
-#myname {
+.myname {
   fill: none;
   font-size: 3rem;
   stroke: #ffc86a;
