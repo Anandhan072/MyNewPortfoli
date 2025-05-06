@@ -7,6 +7,7 @@ import map from "../img/portfolio_img/map.svg";
 import guess from "../img/portfolio_img/guess.svg";
 import travel from "../img/portfolio_img/travel.svg";
 import split from "../img/portfolio_img/split.svg";
+import school from "../img/portfolio_img/school.svg";
 
 /// My log animi function
 
@@ -139,6 +140,7 @@ const portfolio_LinkEl = [
   `https://guessmynumber12.netlify.app/"`,
   `https://travelcheck12.netlify.app`,
   `https://eatsplit12.netlify.app`,
+  `https://schadm.netlify.app/`,
 ];
 
 const portfolio_content = [
@@ -150,6 +152,7 @@ const portfolio_content = [
   `A simple game to find a number, just for creating a learning experience.`,
   `First basic React travel checklist app`,
   `Creating split application for expenses`,
+  `SCHADM ERP. Together, let's shape a smarter tomorrow.`,
 ];
 
 const portfolioHeadings = [
@@ -161,9 +164,10 @@ const portfolioHeadings = [
   `Guess Number`,
   `Travel List`,
   `Eat Split`,
+  `SCHADM`,
 ];
 
-const portfolio_img = [trusshine, Forkify, zoho, bank, map, guess, travel, split];
+const portfolio_img = [trusshine, Forkify, zoho, bank, map, guess, travel, split, school];
 
 /* <div class="portfolios portfolios_trushine">
     <div class="portfolios_hover hover_trushine">
