@@ -268,6 +268,7 @@ my_Form.addEventListener("submit", function (a) {
     );
 
     const data = await responce.json();
+    console.log(data);
   };
 
   sentMail();
